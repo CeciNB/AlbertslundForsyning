@@ -17,8 +17,8 @@ public class HomeController {
     public String energibesparelse(){
         return "energibesparelse";
     }
-    @GetMapping ("/dritstatus")
-    public String dritstatus(){
-        return "dritstatus";
+    @GetMapping ("/driftstatus")
+    public String driftstatus(){
+        return "driftstatus";
     }
 }
