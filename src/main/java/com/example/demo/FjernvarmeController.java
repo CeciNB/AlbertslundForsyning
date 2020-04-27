@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class FjernvarmeController {
-    @GetMapping("/fjernvarme")
+    @GetMapping("fjernvarme")
     public String fjernvarme(){
         return "fjernvarme";
     }
@@ -47,12 +47,12 @@ public class FjernvarmeController {
 
     @GetMapping("/fjernvarme/driftsstatus")
     public String fjernvarmeDrift(){
-        return "/fjernvarme/driftsstatus.html";
+        return "/fjernvarme/driftsstatus";
     }
 
     @GetMapping("/fjernvarme/covid-19")
     public String fjernvarmeCovid19(){
-        return "/fjernvarme/covid-19.html";
+        return "/fjernvarme/covid-19";
     }
 
 
