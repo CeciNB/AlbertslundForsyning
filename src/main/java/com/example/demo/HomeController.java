@@ -9,16 +9,16 @@ public class HomeController {
     public String index(){
         return "index";
     }
-    @GetMapping ("/fjernvarme")
+    /*@GetMapping ("/fjernvarme")
     public String fjernvarme(){
-        return "fjernvarme";
+        return "/fjernvarme";
     }
-    @GetMapping ("/energibesparelse")
-    public String energibesparelse(){
-        return "energibesparelse";
+    @GetMapping ("/energibesparelser")
+    public String energibesparelser(){
+        return "/energibesparelser";
     }
     @GetMapping ("/driftstatus")
     public String driftstatus(){
-        return "driftstatus";
-    }
+        return "/driftstatus";
+    }*/
 }
