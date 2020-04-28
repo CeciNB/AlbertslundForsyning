@@ -16,9 +16,5 @@ public class HomeController {
     @GetMapping ("/energibesparelser")
     public String energibesparelser(){
         return "/energibesparelser";
-    }
-    @GetMapping ("/driftstatus")
-    public String driftstatus(){
-        return "/driftstatus";
     }*/
 }

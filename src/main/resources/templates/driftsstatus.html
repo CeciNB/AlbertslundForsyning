@@ -1,57 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Albertslund Kommune</title>
-    <meta name="description" content="Velkommen til Albertslund Forsynings nye hjemmeside. Her kan du finde information om fjernvarmen i Albertslund samt læse mere om energibesparelser og Danmarks højeste energitilskud.">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Content-Language" content="da">
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- RSS FEEDS -->
-
-
-    <!-- Siteimprove meta tags -->
-
-
-    <!-- Fonts -->
-
-    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800">
-
+    <meta charset="UTF-8">
+    <title>Driftstatus</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/less/imports.less?v=20">
     <link rel="stylesheet" href="/css/flick/jquery-ui-1.10.3.custom.min.css">
 
     <!-- Theme Colors -->
     <link rel="stylesheet" href="/css/ThemeColorCss.css">
-
-
-    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<Script src="/static/Scripts1/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script>window.jQuery || document.write('<Script src="/scripts/vendor/jquery-ui-1.10.4.custom.min.js"><\/script>')</script>
-
-    <script src="/Scripts1/vendor/jquery.validate.min.js"></script>
-    <script src="/Scripts1/vendor/jquery.validate.unobtrusive.js"></script>
-
-    <script type="text/javascript" src="https://kort.albertslund.dk/clientapi/minimap2/mmloader.js" charset="iso-8859-1"></script>
-    <!--[if IE]>
-    <script src="/scripts/vendor/respond.min.js"></script>
-    <![endif]-->
-
-
-    <!-- current PageId for Javascript -->
-    <script>
-        window.pageId = 26207;
-    </script>
-    <style type="text/css">.fancybox-margin{margin-right:15px;}</style></head>
+</head>
 <body class="site-level-">
 <div class="wrapper">
     <header class="container">
@@ -81,7 +39,7 @@
             <div>
 
                 <form class="search-field" action="/soeg" method="get">
-                    <input type="text" class="formcontrol search-input" id="q" name="q" placeholder="Skriv hvad du søger..." aria-label="Skriv hvad du søger...">
+                    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" class="formcontrol search-input ui-autocomplete-input" id="q" name="q" placeholder="Skriv hvad du søger..." aria-label="Skriv hvad du søger..." autocomplete="off">
                     <input type="hidden" value="Skriv hvad du søger...">
                     <button class="search-button"></button>
                 </form>
@@ -89,7 +47,7 @@
                 <input type="hidden" value="1">
                 <nav id="navigation" class="topnavigation  hide-on-print">
                     <ul id="mega-menu">
-                        <li class="expandable theme- current ">
+                        <li class="expandable theme-  ">
 
                             <a href="/fjernvarme/" title="Fjernvarme">
                                 Fjernvarme
@@ -193,9 +151,9 @@
 
                             </ul>
                         </li>
-                        <li class="   ">
+                        <li class="  current ">
 
-                            <a href="/driftsstatus/" title="Driftsstatus">
+                            <a href="/driftsstatus/" data-items-src="/driftsstatus/?alttemplate=MainNavigationSubStructure" title="Driftsstatus">
                                 Driftsstatus
                             </a>
 
@@ -204,7 +162,7 @@
 
                     <div id="open-current-page-in-menu" class="show-navigation primary-bg hide-on-print">
                         <a href="#">Vis menuen</a>
-                        <input type="hidden" value="True 0">
+                        <input type="hidden" value="False 0">
                     </div>
 
                     <div class="hidden-lg mobile-quicklinks hidden-md">
@@ -229,94 +187,110 @@
 
 
 
-        <!-- CAMPAIGN START -->
-        <div class="row campaign">
-            <div class="xs-12">
+        <div class="row two-column ">
+
+            <div class="xs-12 main-content">
+
+                <div class="row">
+
+                    <div class="xs-12">
+
+                        <h1>
+                            Driftsstatus
+                        </h1>
+                        <p class="textpage-teaser">
+                            Her finder du aktuel information om driftsforstyrrelser i varmeforsyningen
+                        </p>
+
+                        <hr>
 
 
 
+
+                        <!-- Insert default "beforeContent" markup here -->
+
+
+                        <iframe title="" src="https://dk.sms-service.dk/iFrame/driftstatus-map?customerId=fd02e030-1729-4052-ab17-0747a015e553" style="width:100%; height: 900px" frameborder="0" seamless="seamless"></iframe>
+                        <p>&nbsp;</p>
+                        <p><strong>SMS-service</strong></p>
+                        <p><span>Hvis uheldet skulle være ude og der opstår driftsforstyrrelser i det område, hvor du bor, vil du modtage en sms-besked om dette på din mobiltelefon eller e-mail. Du kan tilmelde dig via linket<span>&nbsp;</span><a data-id="32559" href="/kontakt-os/sms-service/" title="SMS-service">Tilmeld sms-service</a>.</span></p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;&nbsp;</p>
+                        <p><strong>Kontakt Albertslund Forsyning</strong></p>
+                        <p>Vognporten 9<br>2620 Albertslund</p>
+                        <p>Tlf: 4368 6888<br>Mail:<span>&nbsp;</span><a href="mailto:info@albforsyning.dk">info@albforsyning.dk</a></p>
+                        <p>Telefontider:</p>
+                        <table border="0">
+                            <tbody>
+                            <tr>
+                                <td>Mandag - torsdag</td>
+                                <td>08.00 - 15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Fredag&nbsp;</td>
+                                <td>08.00 - 14.00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>I akutte situationer uden for normal telefontid kan driftsvagten træffes på 4011 8691</strong></p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+
+
+                        <!-- Insert default "afterContent" markup here -->
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="xs-12 sm-12 md-4 right-content hide">
+
+
+                <a href="/kontakt-os/sms-service/" target="_self" class="splash primary-bg-dark hidden-print">
+                    <div class="content">
+                        <h3>SMS-service</h3>
+                        <hr>
+                        <p>Til- eller afmeld dig her</p>
+                    </div>
+                </a><div class="box-item  jsSetBlockHeight  sec-bg-color  hidden-print">
+                <h3>Kontakt Albertslund Forsyning</h3>
+                <div class="top"></div>
+                <p></p><p>Vognporten 9<br>2620 Albertslund</p>
+                <p>Tlf: 4368 6888<br>Mail: <a href="mailto:info@albforsyning.dk">info@albforsyning.dk</a></p>
+                <p>Telefontider:</p>
+                <table border="0" style="width: 301px; height: 44px;">
+                    <tbody>
+                    <tr>
+                        <td>Mandag - torsdag</td>
+                        <td>08.00 - 15.00</td>
+                    </tr>
+                    <tr>
+                        <td>Fredag&nbsp;</td>
+                        <td>08.00 - 14.00</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>I akutte situationer uden for normal telefontid kan driftsvagten træffes på 4011 8691</p><p></p>
+            </div>
 
             </div>
         </div>
-        <!-- CAMPAIGN END -->
 
 
-        <div class="row two-column">
 
-        </div>
-        <div class="row">
-            <ul class="overview">
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/hvad-er-fjernvarme/" class="calltoactiontext">
-
-                        <h3>Hvad er fjernvarme?</h3>
-                        Fjernvarme er energi til bygningsopvarmning produceret et andet sted en...
-                    </a>
-                </li>
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/tao-ordningen/" class="calltoactiontext">
-
-                        <h3>TAO-ordningen</h3>
-                        TAO-ordningen er et tilbud om leje af fjernvarmetilslutningsanlæg
-                    </a>
-                </li>
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/udskiftning-af-maalere/" class="calltoactiontext">
-
-                        <h3>Udskiftning af målere</h3>
-                        I september 2018 startede vi udskiftningen af 16.000 gamle vand- og fje...
-                    </a>
-                </li>
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/lavtemperaturfjernvarme/" class="calltoactiontext">
-
-                        <h3>Lavtemperaturfjernvarme</h3>
-                        I dag er det vand du får fra Varmeværket minimum 70 grader varmt. Den t...
-                    </a>
-                </li>
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/ledningsoplysninger/" class="calltoactiontext">
-
-                        <h3>Ledningsoplysninger</h3>
-                        Gravearbejde er ikke kun et spørgsmål om at grave et hul i jorden, for ...
-                    </a>
-                </li>
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/takster-og-bestemmelser/" class="calltoactiontext">
-
-                        <h3>Takster og bestemmelser</h3>
-                        Her kan du finde takster for fjernvarmen og de tekniske og almindelige ...
-                    </a>
-                </li>
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/planlagte-renoveringer/" class="calltoactiontext">
-
-                        <h3>Planlagte renoveringer</h3>
-                        Albertslund Varmeværk er løbende i gang med at renovere og forbedre led...
-                    </a>
-                </li>
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/driftsstatus/" class="calltoactiontext">
-
-                        <h3>Driftsstatus</h3>
-                        Her finder du aktuel information om driftsforstyrrelser i varmeforsynin...
-                    </a>
-                </li>
-                <li class="xs-12 sm-6">
-                    <a href="/fjernvarme/covid-19/" class="calltoactiontext">
-
-                        <h3>COVID-19</h3>
-                        Albertslund Forsyning følger myndighedernes anbefalinger.
-                    </a>
-                </li>
-            </ul>
-        </div>
 
     </div>
 
     <div class="footer hide-on-print">
 
-        <img class="silhouette" src="images/silhouette1.png" alt="Silhouette" style="margin-top: -0px">
+        <img class="silhouette" src="/images/silhouette1.png" alt="Silhouette" style="margin-top: -0px">
 
         <div class="footer-content sec-bg-color">
 
@@ -354,7 +328,7 @@
                                 <a href="https://www.facebook.com/Albertslund-Forsyning-375518805873099/" target="_blank" class="icon round icon-facebook" title="Facebook"></a>
                             </div>
                             <div class="icons">
-                                <a href="/umbraco#/content/content/edit/32238" target="_blank">
+                                <a href="https://albertslund.dk/umbraco#/content/content/edit/32117" target="_blank">
                                     Redaktør login
                                 </a>
                             </div>
@@ -370,7 +344,7 @@
 
     </div>
 </div>
-<div id="cookie-notification">
+<div id="cookie-notification" style="display: block; bottom: 0px;">
     Cookies hjælper os med at levere vores tjenester. Ved at bruge vores tjenester, accepterer du vores brug af cookies.
     <button>OK</button>
     <a href="http://erhvervsstyrelsen.dk/hvad-er-cookies" target="_blank" title="Læs mere om cookies på denne side">Læs mere</a>
@@ -380,7 +354,7 @@
 
 <!-- fancyBox -->
 <link rel="stylesheet" href="/scripts/fancybox/jquery.fancybox.css" type="text/css" media="screen">
-<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/scripts/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="/scripts/fancybox/jquery.fancybox.pack.js"></script>
 
 <!-- fancyBox Init -->
 <script type="text/javascript">
@@ -416,7 +390,7 @@
 <script src="/scripts/vendor/navigation-animation.js"></script>
 <script src="/Scripts1/emailSubscription.js"></script>
 <script src="/Scripts1/lucene.autocomplete.js?v=1"></script>
-<script src="/Scripts1/lucene.search.js?v=1"></script>
+<script src="/Scripts1/lucene.search.js?v=1"></script><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
 <script src="/scripts/borgerdk.js"></script>
 <script src="/scripts/emply.js"></script>
 <script src="/scripts/navigation.js"></script>
